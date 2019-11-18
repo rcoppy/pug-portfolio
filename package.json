@@ -1,0 +1,23 @@
+{
+  "name": "personal-site-v3",
+  "version": "1.0.0",
+  "description": "Alex RC portfolio site",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcoppy/personal-site-v3.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Alex Rupp-Coppi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcoppy/personal-site-v3/issues"
+  },
+  "homepage": "https://github.com/rcoppy/personal-site-v3#readme"
+}
