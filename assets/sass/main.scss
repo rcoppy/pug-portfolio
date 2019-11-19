@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap');
+
+$ocean_blue:#5799B6;
+$header_color: darken(rgba(255,255,255,0.92), 3%);
+
+$header_height: 24vh;
+$footer_height: 20vh;
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: lighten(blue, 40%);
+    background-image: url('../images/blue_blurred_small.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
+    h2 {
+        font-weight: bold;
+    }
+
+    color: darken(rgba(255,255,255,0.85), 7%);
+
+    position: relative;
+    min-height: 100vh;
+}
+
+.wrapper.content {
+
+    box-shadow: 0 0 2rem darken(cadetblue, 40%);
+    min-height: 100vh - $header_height - $footer_height;
+    padding-bottom: 20vh;
+    padding-top: 1rem;
+    margin-top: -1rem;
+}
+
+.container.content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    background-color: darken(rgba($ocean_blue,0.4),60%);
+    box-shadow: 0 0 2rem darken(rgba($ocean_blue,0.7),60%);
+
+    border-radius: 3px;
+}
+
+header, footer {
+    background-color: darken(rgb(100, 0, 255), 40%);
+    background-image: url('../images/black_blurred_small.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-attachment: fixed;
+}
+
+header {
+    font-family: 'Playfair Display', serif;
+    color: $header_color;
+    height: $header_height;
+    padding-top: 17vh;
+    // padding-bottom: 5vh;
+    box-shadow: 0 0 2rem darken(cadetblue, 30%);
+    position: relative;
+    z-index: 2;
+
+    
+}
+
+h1, h2 {
+    filter: drop-shadow(0 3px 0.75rem darken($header_color, 70%));
+}
+
+footer {
+    position: absolute;
+    height: $footer_height;
+    width: 100%;
+    bottom: 0px;
+
+    z-index: -1;
+
+    padding-top: 2rem;
+}
+
+p img {
+    max-width: 20%;
+    border-radius: 5px;
+    margin: 0.5rem 1.5rem;
+}
