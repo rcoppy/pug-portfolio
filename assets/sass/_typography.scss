@@ -1,3 +1,11 @@
+/*
+@include media-breakpoint-up(xs) { ... }
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+*/
+
 body {
 
     font-family: 'Lato', sans-serif;
@@ -5,10 +13,22 @@ body {
 
     h2 {
         font-weight: bold;
+        font-size: 4.5rem;
     }
+
+    // on smaller screens need bigger font
+    font-size: 3rem;
+
+    /*@include media-breakpoint-up(md) {
+        font-size: 1rem;
+    }*/
 }
 
 header {
     font-family: 'Playfair Display', serif;
     color: $header_color;
+    
+    h1 {
+        font-size: 8rem;
+    }
 }
