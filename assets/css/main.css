@@ -1,70 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap");
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #ccccff;
-  background-image: url("../images/blue_blurred_small.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  color: rgba(237, 237, 237, 0.85);
-  position: relative;
-  min-height: 100vh;
-}
-body h2 {
-  font-weight: bold;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 2 | @import "~bootstrap/scss/bootstrap";
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass\main.scss 2:9  root stylesheet */
 
-.wrapper.content {
-  box-shadow: 0 0 2rem #132020;
-  min-height: 56vh;
-  padding-bottom: 20vh;
-  padding-top: 1rem;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import \"~bootstrap/scss/bootstrap\";\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\main.scss 2:9  root stylesheet";
 }
-
-.container.content {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
-  border-radius: 3px;
-}
-
-header, footer {
-  background-color: #140033;
-  background-image: url("../images/black_blurred_small.jpg");
-  background-size: cover;
-  background-position-y: center;
-  background-attachment: fixed;
-}
-
-header {
-  font-family: "Playfair Display", serif;
-  color: rgba(247, 247, 247, 0.92);
-  height: 24vh;
-  padding-top: 17vh;
-  box-shadow: 0 0 2rem #263f40;
-  position: relative;
-  z-index: 2;
-}
-
-h1, h2 {
-  filter: drop-shadow(0 3px 0.75rem rgba(69, 69, 69, 0.92));
-}
-
-footer {
-  position: absolute;
-  height: 20vh;
-  width: 100%;
-  bottom: 0px;
-  z-index: -1;
-  padding-top: 2rem;
-}
-
-p img {
-  max-width: 20%;
-  border-radius: 5px;
-  margin: 0.5rem 1.5rem;
-}
-
-/*# sourceMappingURL=main.css.map */

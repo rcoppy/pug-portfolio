@@ -1,0 +1,14 @@
+body {
+
+    font-family: 'Lato', sans-serif;
+    color: darken(rgba(255,255,255,0.85), 7%);
+
+    h2 {
+        font-weight: bold;
+    }
+}
+
+header {
+    font-family: 'Playfair Display', serif;
+    color: $header_color;
+}

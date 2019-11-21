@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap');
+@import "~bootstrap/scss/bootstrap";
 
-$ocean_blue:#5799B6;
-$header_color: darken(rgba(255,255,255,0.92), 3%);
 
-$header_height: 24vh;
-$footer_height: 20vh;
+/*
+@include media-breakpoint-up(xs) { ... }
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+*/
+
+@import "variables";
+@import "typography";
+
 
 body {
-    font-family: 'Lato', sans-serif;
     background-color: lighten(blue, 40%);
     background-image: url('../images/blue_blurred_small.jpg');
     background-size: cover;
     background-attachment: fixed;
-
-    h2 {
-        font-weight: bold;
-    }
-
-    color: darken(rgba(255,255,255,0.85), 7%);
 
     position: relative;
     min-height: 100vh;
@@ -54,16 +55,12 @@ header, footer {
 }
 
 header {
-    font-family: 'Playfair Display', serif;
-    color: $header_color;
     height: $header_height;
     padding-top: 17vh;
     // padding-bottom: 5vh;
     box-shadow: 0 0 2rem darken(cadetblue, 30%);
     position: relative;
     z-index: 2;
-
-    
 }
 
 h1, h2 {
