@@ -17,7 +17,7 @@ body {
     }
 
     // on smaller screens need bigger font
-    font-size: 1.5rem;
+    font-size: 1rem;
 
     @include media-breakpoint-up(md) {
         font-size: 1rem;
