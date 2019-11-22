@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap');
-@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
-
+//@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+@import '~/bootstrap/scss/bootstrap';
 
 /*
 @include media-breakpoint-up(xs) { ... }
@@ -44,6 +44,8 @@ body {
     box-shadow: 0 0 2rem darken(rgba($ocean_blue,0.7),60%);
 
     border-radius: 3px;
+
+    max-width: 95%;
 }
 
 header, footer {

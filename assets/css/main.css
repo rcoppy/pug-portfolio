@@ -1,118 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap");
-@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
-/*
-@include media-breakpoint-up(xs) { ... }
-@include media-breakpoint-up(sm) { ... }
-@include media-breakpoint-up(md) { ... }
-@include media-breakpoint-up(lg) { ... }
-@include media-breakpoint-up(xl) { ... }
-*/
-/*
-@include media-breakpoint-up(xs) { ... }
-@include media-breakpoint-up(sm) { ... }
-@include media-breakpoint-up(md) { ... }
-@include media-breakpoint-up(lg) { ... }
-@include media-breakpoint-up(xl) { ... }
-*/
-body {
-  font-family: "Lato", sans-serif;
-  color: rgba(237, 237, 237, 0.85);
-  font-size: 3rem;
-  /*@include media-breakpoint-up(md) {
-      font-size: 1rem;
-  }*/
-}
-body h2 {
-  font-weight: bold;
-  font-size: 4.5rem;
-}
+/* Error: Can't find stylesheet to import.
+ *   ,
+ * 3 | @import '~/bootstrap/scss/bootstrap';
+ *   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass\main.scss 3:9  root stylesheet */
 
-header {
-  font-family: "Playfair Display", serif;
-  color: rgba(247, 247, 247, 0.92);
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Can't find stylesheet to import.\a   \2577 \a 3 \2502  @import '~/bootstrap/scss/bootstrap';\d\a   \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\main.scss 3:9  root stylesheet";
 }
-header h1 {
-  font-size: 8rem;
-}
-
-body {
-  background-color: #ccccff;
-  background-image: url("../images/blue_blurred_small.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  min-height: 100vh;
-}
-
-.wrapper.content {
-  box-shadow: 0 0 2rem #132020;
-  min-height: 56vh;
-  padding-bottom: 20vh;
-  padding-top: 1rem;
-}
-
-.container.content {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
-  border-radius: 3px;
-}
-
-header, footer {
-  background-color: #140033;
-  background-image: url("../images/black_blurred_small.jpg");
-  background-size: cover;
-  background-position-y: center;
-  background-attachment: fixed;
-}
-
-header {
-  height: 24vh;
-  box-shadow: 0 0 2rem #263f40;
-  position: relative;
-  z-index: 2;
-}
-header div.container {
-  padding-top: 30%;
-}
-
-h1, h2 {
-  filter: drop-shadow(0 3px 0.75rem rgba(69, 69, 69, 0.92));
-}
-
-footer {
-  position: absolute;
-  height: 20vh;
-  width: 100%;
-  bottom: 0px;
-  z-index: -1;
-  padding-top: 2rem;
-}
-
-p img {
-  border-radius: 5px;
-  margin: 0.5rem 1.5rem;
-}
-p img.float-right, p img.float-left {
-  float: none !important;
-  margin: 2.2rem 10%;
-  width: 80%;
-  /*
-  @include {
-      float: left;
-  }
-  */
-}
-p img.float-left {
-  /*
-  @include {
-      float: left;
-      max-width: 25%;
-  }
-  */
-}
-
-/*# sourceMappingURL=main.css.map */
