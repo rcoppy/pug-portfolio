@@ -10308,6 +10308,7 @@ footer {
   height: 20vh;
   width: 100%;
   bottom: 0px;
+  overflow: hidden;
   z-index: -1;
   padding-top: 2rem;
 }
