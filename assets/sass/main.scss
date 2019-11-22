@@ -23,19 +23,22 @@ body {
 
     position: relative;
     min-height: 100vh;
-    overflow: hidden; 
+    
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .wrapper.content {
 
     box-shadow: 0 0 2rem darken(cadetblue, 40%);
-    min-height: 100vh - $header_height - $footer_height;
+    min-height: 100vh - $header_height;
 
     @include media-breakpoint-down(md) {
-        min-height: 100vh - $mobile_header_height - $mobile_footer_height;
+        min-height: 100vh - $mobile_header_height;
+        padding-bottom: $mobile_footer_height;
     }
 
-    padding-bottom: 20vh;
+    padding-bottom: $footer_height;
     padding-top: 1rem;
     //margin-top: -1rem;
 }
@@ -70,7 +73,7 @@ header {
     height: $header_height;
 
     @include media-breakpoint-down(md) {
-        height: $mobile_footer_height;
+        height: $mobile_header_height;
     }
 
     box-shadow: 0 0 2rem darken(cadetblue, 30%);

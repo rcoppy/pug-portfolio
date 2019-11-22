@@ -10252,18 +10252,20 @@ body {
   background-attachment: fixed;
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .wrapper.content {
   box-shadow: 0 0 2rem #132020;
-  min-height: 56vh;
+  min-height: 76vh;
   padding-bottom: 20vh;
   padding-top: 1rem;
 }
 @media (max-width: 991.98px) {
   .wrapper.content {
-    min-height: -5vh;
+    min-height: 35vh;
+    padding-bottom: 40vh;
   }
 }
 
@@ -10305,7 +10307,7 @@ header {
 }
 @media (max-width: 991.98px) {
   header {
-    height: 40vh;
+    height: 65vh;
   }
 }
 h1,
