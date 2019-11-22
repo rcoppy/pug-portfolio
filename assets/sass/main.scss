@@ -90,28 +90,26 @@ p img {
 
     &.float-right, &.float-left {
         // on tiny display actually ignore float
-        float: none !important;
+        float: none;
         margin: 2.2rem 10%;
         width: 80%;
 
-        /*
-        @include {
-            float: left;
+        @include media-breakpoint-up(md) {
+            margin: 1rem 0.5rem;
+            max-width: 25%;
         }
-        */
     }
 
     &.float-left {
-        /*
-        @include {
+        @include media-breakpoint-up(md) {
             float: left;
-            max-width: 25%;
         }
-        */
     }
 
     &.float-right {
-        
+        @include media-breakpoint-up(md) {
+            float: right;
+        }
     }
 
 
