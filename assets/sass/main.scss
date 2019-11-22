@@ -23,12 +23,18 @@ body {
 
     position: relative;
     min-height: 100vh;
+    overflow: hidden; 
 }
 
 .wrapper.content {
 
     box-shadow: 0 0 2rem darken(cadetblue, 40%);
     min-height: 100vh - $header_height - $footer_height;
+
+    @include media-breakpoint-down(md) {
+        min-height: 100vh - $mobile_header_height - $mobile_footer_height;
+    }
+
     padding-bottom: 20vh;
     padding-top: 1rem;
     //margin-top: -1rem;
@@ -63,6 +69,10 @@ footer {
 header {
     height: $header_height;
 
+    @include media-breakpoint-down(md) {
+        height: $mobile_footer_height;
+    }
+
     box-shadow: 0 0 2rem darken(cadetblue, 30%);
     position: relative;
     z-index: 2;
@@ -83,6 +93,11 @@ h2 {
 footer {
     position: absolute;
     height: $footer_height;
+
+    @include media-breakpoint-down(md) {
+        height: $mobile_footer_height;
+    }
+
     width: 100%;
     bottom: 0px;
 

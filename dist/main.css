@@ -10252,6 +10252,7 @@ body {
   background-attachment: fixed;
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .wrapper.content {
@@ -10259,6 +10260,11 @@ body {
   min-height: 56vh;
   padding-bottom: 20vh;
   padding-top: 1rem;
+}
+@media (max-width: 991.98px) {
+  .wrapper.content {
+    min-height: -5vh;
+  }
 }
 
 .container.content {
@@ -10297,6 +10303,11 @@ header {
   -webkit-box-direction: reverse;
           flex-direction: column-reverse;
 }
+@media (max-width: 991.98px) {
+  header {
+    height: 40vh;
+  }
+}
 h1,
 h2 {
   -webkit-filter: drop-shadow(0 3px 0.75rem rgba(69, 69, 69, 0.92));
@@ -10311,6 +10322,11 @@ footer {
   overflow: hidden;
   z-index: -1;
   padding-top: 2rem;
+}
+@media (max-width: 991.98px) {
+  footer {
+    height: 40vh;
+  }
 }
 
 p img {
