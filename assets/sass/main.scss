@@ -41,15 +41,18 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-    background-color: darken(rgba($ocean_blue,0.4),60%);
-    box-shadow: 0 0 2rem darken(rgba($ocean_blue,0.7),60%);
+    background-color: darken(rgba($ocean_blue, 0.4), 60%);
+    box-shadow: 0 0 2rem darken(rgba($ocean_blue, 0.7), 60%);
 
     border-radius: 3px;
 
-    max-width: 95%;
+    @include media-breakpoint-down(md) {
+        max-width: 95%;
+    }
 }
 
-header, footer {
+header,
+footer {
     background-color: darken(rgb(100, 0, 255), 40%);
     background-image: url('../images/black_blurred_small.jpg');
     background-size: cover;
@@ -59,17 +62,21 @@ header, footer {
 
 header {
     height: $header_height;
-    
+
     box-shadow: 0 0 2rem darken(cadetblue, 30%);
     position: relative;
     z-index: 2;
 
-    div.container {
-        padding-top: 30%;
-    }
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    div.container {}
 }
 
-h1, h2 {
+h1,
+h2 {
     filter: drop-shadow(0 3px 0.75rem darken($header_color, 70%));
 }
 
@@ -89,7 +96,8 @@ p img {
     border-radius: 5px;
     margin: 0.5rem 1.5rem;
 
-    &.float-right, &.float-left {
+    &.float-right,
+    &.float-left {
         // on tiny display actually ignore float
         float: none;
         margin: 2.2rem 10%;
