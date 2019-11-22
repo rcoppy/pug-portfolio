@@ -10225,7 +10225,7 @@ h3 {
 body {
   font-family: "Lato", sans-serif;
   color: rgba(237, 237, 237, 0.85);
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 body h2 {
   font-weight: bold;
@@ -10233,7 +10233,7 @@ body h2 {
 }
 @media (min-width: 768px) {
   body {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
