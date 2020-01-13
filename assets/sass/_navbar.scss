@@ -23,16 +23,17 @@
     span {
         flex-grow: 1;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
         // box-sizing: border-box;
         border-bottom: $border_bottom_width solid transparent;
         padding-top: $border_bottom_width;
-
     }
 
     span a {
-        padding: 0.5rem, 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
     }
 
     span:hover {

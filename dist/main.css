@@ -10227,6 +10227,14 @@ body {
   color: rgba(237, 237, 237, 0.85);
   font-size: 0.95rem;
 }
+body a {
+  color: #9ec4d5;
+  text-decoration: none;
+}
+body a:hover {
+  color: #c2dae4;
+  text-decoration: none;
+}
 body h2 {
   font-weight: bold;
   font-size: 2.5rem;
@@ -10267,15 +10275,21 @@ header h1 {
           flex-grow: 1;
   display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   border-bottom: 4px solid transparent;
   padding-top: 4px;
 }
 .navbar span a {
-  padding: 0.5rem, 1rem;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
 }
 .navbar span:hover {
   background-color: rgba(3, 53, 72, 0.8);

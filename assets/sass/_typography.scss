@@ -8,8 +8,19 @@
 
 body {
 
+    a {
+        color: $hyperlink_color;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $hyperlink_hover_color;
+        text-decoration: none;
+    }
+
+
     font-family: 'Lato', sans-serif;
-    color: darken(rgba(255,255,255,0.85), 7%);
+    color: $text_color;
 
     h2 {
         font-weight: bold;
