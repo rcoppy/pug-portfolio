@@ -14,6 +14,8 @@
 @import "microclearfix";
 @import "typography";
 
+@import "navbar";
+
 
 body {
     background-color: lighten(blue, 40%);
@@ -83,7 +85,8 @@ header {
     overflow: hidden;
 
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: flex-end;
+    flex-direction: column;
 
     div.container {}
 }

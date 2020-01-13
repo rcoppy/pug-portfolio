@@ -1,0 +1,42 @@
+.navbar {
+
+    $border_bottom_width: 4px;
+
+    width: 100%;
+    height: $navbar_height;
+    background-color: $navbar_color;
+
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    >.container {
+
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+
+        height: 100%;
+
+    }
+
+    span {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // box-sizing: border-box;
+        border-bottom: $border_bottom_width solid transparent;
+        padding-top: $border_bottom_width;
+
+    }
+
+    span a {
+        padding: 0.5rem, 1rem;
+    }
+
+    span:hover {
+        background-color: lighten($navbar_color, 5%);
+        border-bottom: $border_bottom_width solid lighten($navbar_color, 25%);
+    }
+}
