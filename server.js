@@ -2,6 +2,7 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 const path = require('path');
+const pug = require('pug');
 const port = process.argv[2] || 9000;
 
 http.createServer(function (req, res) {
@@ -40,17 +41,35 @@ http.createServer(function (req, res) {
     // if is a directory search for index file matching the extention
     if (fs.statSync(pathname).isDirectory()) pathname += '/index' + ext;
 
-    // read file from file system
-    fs.readFile(pathname, function(err, data){
-      if(err){
-        res.statusCode = 500;
-        res.end(`Error getting the file: ${err}.`);
-      } else {
-        // if the file is found, set Content-type and send data
-        res.setHeader('Content-type', map[ext] || 'text/plain' );
-        res.end(data);
-      }
-    });
+    if (ext === '.pug') {
+      fs.readFile(pathname, function(err, data){
+        if(err){
+          res.statusCode = 500;
+          res.end(`Error getting the file: ${err}.`);
+        } else {
+          // if the file is found, set Content-type and send data
+          
+          const compiledFunction = pug.compile(data);
+          const props = {};
+
+          res.setHeader('Content-type', 'text/html' );
+          res.end(compiledFunction(props));
+        }
+      });
+    } else {
+      // read file from file system
+      fs.readFile(pathname, function(err, data){
+        if(err){
+          res.statusCode = 500;
+          res.end(`Error getting the file: ${err}.`);
+        } else {
+          // if the file is found, set Content-type and send data
+          
+          res.setHeader('Content-type', map[ext] || 'text/plain' );
+          res.end(data);
+        }
+      });
+    }
   });
 
 
