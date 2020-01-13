@@ -42,20 +42,12 @@ http.createServer(function (req, res) {
     if (fs.statSync(pathname).isDirectory()) pathname += '/index' + ext;
 
     if (ext === '.pug') {
-      fs.readFile(pathname, function(err, data){
-        if(err){
-          res.statusCode = 500;
-          res.end(`Error getting the file: ${err}.`);
-        } else {
-          // if the file is found, set Content-type and send data
-          
-          const compiledFunction = pug.compile(data);
-          const props = {};
+      const compiledFunction = pug.compileFile(pathname);
+      const props = {};
 
-          res.setHeader('Content-type', 'text/html' );
-          res.end(compiledFunction(props));
-        }
-      });
+      res.setHeader('Content-type', 'text/html' );
+      res.end(compiledFunction(props));
+      
     } else {
       // read file from file system
       fs.readFile(pathname, function(err, data){
