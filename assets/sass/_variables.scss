@@ -10,11 +10,11 @@ $text_color: darken(rgba(255,255,255,0.85), 7%);
 $navbar_height: 8vh;
 $header_height: 24vh + $navbar_height;
 $footer_height: 20vh;
-$gallery_card_height: ((100vh - ($header_height + $footer_height + 6vh)));
+$gallery_card_height: (100vh - $header_height - $footer_height - 6vh) / 3;
 
 $mobile_header_height: 65vh + $navbar_height;
 $mobile_footer_height: 40vh;
-$mobile_gallery_card_height: (100vh - ($mobile_header_height + $mobile_footer_height + 8vh));
+$mobile_gallery_card_height: 40vh;
 
 
 

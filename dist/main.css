@@ -10297,20 +10297,24 @@ header h1 {
 }
 
 .gallery-card {
-  height: 42vh;
+  height: 14vh;
   margin: 1rem 1rem;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
 }
 @media (max-width: 991.98px) {
   .gallery-card {
-    height: -21vh;
+    height: 40vh;
   }
 }
 .gallery-card > .card-image {
   height: 80%;
+  overflow: hidden;
+  display: block;
 }
 .gallery-card > .card-image > img {
-  height: inherit;
+  width: 100%;
 }
 .gallery-card > .card-label {
   position: relative;

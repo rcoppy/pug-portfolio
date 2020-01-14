@@ -3,6 +3,8 @@
     height: $gallery_card_height;
     margin: 1rem 1rem;
 
+    flex-grow: 1;
+
     box-shadow: 0 0 2rem darken(rgba($ocean_blue, 0.7), 60%);
 
     @include media-breakpoint-down(md) {
@@ -11,8 +13,10 @@
 
     >.card-image {
         height: 80%;
+        overflow: hidden;
+        display: block;
         >img {
-            height: inherit;
+            width: 100%;
         }
     }
 
