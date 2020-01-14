@@ -4,18 +4,18 @@
     padding-top: 2vh;
     padding-bottom: 4vh;
 
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+    }
+
     @include transition(background-color 0.2s ease-in-out);
+    @include transition(color 0.2s ease-in-out);
 
     background: none;
 
-    border-bottom: 1px solid darken($ocean_blue, 10%);
-
     &:hover {
-        background: rgba($ocean_blue, 0.5);
-        background: linear-gradient(27deg, $dark_transparent_ocean_blue 29%, $ocean_blue 100%);
-
         .img-container {
-            filter: drop-shadow(0 0 0.35rem rgba($ocean_blue, 1));
+            filter: drop-shadow(0 0 0.5rem rgba($ocean_blue, 1));
         }
     }
 
@@ -26,6 +26,14 @@
         float: left;
         width: 10vh;
         height: 10vh;
+
+        flex-shrink: 0;
+
+        @include media-breakpoint-down(md) {
+            width: 5vh;
+            height: 5vh;
+        }
+
         overflow: hidden;
         display: block;
         border-radius: 50%;

@@ -10407,12 +10407,18 @@ header h1 {
   padding-bottom: 4vh;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
   background: none;
-  border-bottom: 1px solid #427e98;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
           align-items: center;
+}
+@media (max-width: 991.98px) {
+  .composers-list-entry {
+    padding-left: 0;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .composers-list-entry {
@@ -10420,18 +10426,21 @@ header h1 {
     transition: none;
   }
 }
-.composers-list-entry:hover {
-  background: rgba(87, 153, 182, 0.5);
-  background: linear-gradient(27deg, rgba(0, 0, 0, 0.4) 29%, #5799B6 100%);
+@media (prefers-reduced-motion: reduce) {
+  .composers-list-entry {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 .composers-list-entry:hover .img-container {
-  -webkit-filter: drop-shadow(0 0 0.35rem #5799b6);
-          filter: drop-shadow(0 0 0.35rem #5799b6);
+  -webkit-filter: drop-shadow(0 0 0.5rem #5799b6);
+          filter: drop-shadow(0 0 0.5rem #5799b6);
 }
 .composers-list-entry .img-container {
   float: left;
   width: 10vh;
   height: 10vh;
+  flex-shrink: 0;
   overflow: hidden;
   display: block;
   border-radius: 50%;
@@ -10442,6 +10451,12 @@ header h1 {
   transition: -webkit-filter 0.3s ease-in-out;
   transition: filter 0.3s ease-in-out;
   transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+}
+@media (max-width: 991.98px) {
+  .composers-list-entry .img-container {
+    width: 5vh;
+    height: 5vh;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .composers-list-entry .img-container {
