@@ -30,8 +30,8 @@
         flex-shrink: 0;
 
         @include media-breakpoint-down(md) {
-            width: 5vh;
-            height: 5vh;
+            width: 6vh;
+            height: 6vh;
         }
 
         overflow: hidden;

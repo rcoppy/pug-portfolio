@@ -10253,6 +10253,12 @@ header h1 {
   font-size: 6rem;
 }
 
+.content-banner {
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.4);
+}
+
 .navbar {
   width: 100%;
   height: 8vh;
@@ -10454,8 +10460,8 @@ header h1 {
 }
 @media (max-width: 991.98px) {
   .composers-list-entry .img-container {
-    width: 5vh;
-    height: 5vh;
+    width: 6vh;
+    height: 6vh;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -10484,13 +10490,17 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .wrapper.content {
+  z-index: 0;
   box-shadow: 0 0 2rem #132020;
   min-height: 68vh;
   padding-bottom: 20vh;
   padding-top: 1rem;
+  pointer-events: none;
 }
 @media (max-width: 991.98px) {
   .wrapper.content {
@@ -10500,6 +10510,7 @@ body {
 }
 
 .container.content {
+  pointer-events: auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 1rem;
@@ -10521,6 +10532,7 @@ footer {
   background-size: cover;
   background-position-y: center;
   background-attachment: fixed;
+  pointer-events: auto;
 }
 
 header {
@@ -10552,7 +10564,7 @@ footer {
   position: absolute;
   height: 20vh;
   width: 100%;
-  bottom: 0px;
+  bottom: 0;
   overflow: hidden;
   z-index: -1;
   padding-top: 2rem;
