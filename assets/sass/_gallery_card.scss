@@ -7,7 +7,7 @@
     
     $min_label_height: 2.75rem;
 
-    height: calc(#{$gallery_card_height} + #{$min_label_height});
+    max-height: calc(#{$gallery_card_height} + #{$min_label_height});
     max-width: 25%;
     margin: 1rem 1rem;
 
@@ -18,7 +18,7 @@
     box-shadow: 0 0 2rem darken(rgba($ocean_blue, 0.7), 60%);
 
     @include media-breakpoint-down(md) {
-        height: calc(#{$mobile_gallery_card_height} + #{$min_label_height});
+        max-height: calc(#{$mobile_gallery_card_height} + #{$min_label_height});
         max-width: 90%;
     }
 

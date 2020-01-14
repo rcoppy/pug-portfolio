@@ -10327,7 +10327,7 @@ header h1 {
 .gallery-card {
   -webkit-transition: box-shadow 0.3s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
-  height: calc(28vh + 2.75rem);
+  max-height: calc(28vh + 2.75rem);
   max-width: 25%;
   margin: 1rem 1rem;
   display: -webkit-inline-box;
@@ -10345,7 +10345,7 @@ header h1 {
 }
 @media (max-width: 991.98px) {
   .gallery-card {
-    height: calc(40vh + 2.75rem);
+    max-height: calc(40vh + 2.75rem);
     max-width: 90%;
   }
 }
