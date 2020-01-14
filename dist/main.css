@@ -10296,41 +10296,72 @@ header h1 {
   border-bottom: 4px solid rgba(7, 124, 170, 0.8);
 }
 
+.gallery-card:hover {
+  box-shadow: 0 0 2rem rgba(123, 175, 197, 0.7);
+}
+
 .gallery-card {
-  height: 14vh;
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  height: calc(28vh + 2.75rem);
+  max-width: 25%;
   margin: 1rem 1rem;
-  -webkit-box-flex: 1;
-          flex-grow: 1;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.7);
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 @media (max-width: 991.98px) {
   .gallery-card {
-    height: 40vh;
+    height: calc(40vh + 2.75rem);
+    max-width: 90%;
   }
 }
 .gallery-card > .card-image {
-  height: 80%;
+  width: inherit;
   overflow: hidden;
-  display: block;
 }
-.gallery-card > .card-image > img {
+.gallery-card .score-link img {
   width: 100%;
 }
 .gallery-card > .card-label {
   position: relative;
-  height: 20%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.gallery-card > .card-label > .label-links {
+  width: calc(100% - 6vh);
+  display: block;
+  padding-left: 0.5rem;
+  padding-bottom: 0.3rem;
+}
+.gallery-card > .card-label > .label-links > a {
+  display: block;
+}
+.gallery-card > .card-label > .label-links > p {
+  padding-left: 0.25rem;
+  margin: 0;
 }
 .gallery-card .card-avatar {
   position: absolute;
-  top: -2vh;
-  right: -1vh;
-  width: 4vh;
-  height: 4vh;
-  border-radius: 100%;
+  bottom: -1.25vh;
+  right: -1.25vh;
+  width: 7vh;
+  height: 7vh;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-bottom-left-radius: 5%;
   overflow: hidden;
   display: block;
-  -webkit-filter: drop-shadow(0, 0, 2rem, rgba(0, 0, 0, 0.7));
-          filter: drop-shadow(0, 0, 2rem, rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.7));
 }
 .gallery-card .card-avatar > img {
   width: inherit;
@@ -10342,9 +10373,8 @@ header h1 {
   display: inline-flex;
   flex-wrap: wrap;
   width: 100%;
-  margin: 1vh 2vh;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 body {
