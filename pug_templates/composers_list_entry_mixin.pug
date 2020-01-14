@@ -1,0 +1,8 @@
+mixin composers_list_entry_mixin(composer_name, composer_bio, avatar_url, composer_url)
+  .composers-list-entry
+    a(href=composer_url)
+      h3= composer_name
+    p= composer_bio
+    hr
+    img(src=avatar_url)
+    

@@ -2,5 +2,10 @@ extends page_template.pug
 
 block content 
   h2 Composers
-  p This is a test of mixins and includes.
-  include hhg_text
+  p Here are the students who have submitted scores so far.
+  
+  .composers-list
+    - n = 0
+    while n < 20
+      - n++
+      include dummy_composer_entry

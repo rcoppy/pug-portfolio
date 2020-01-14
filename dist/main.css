@@ -10401,6 +10401,10 @@ header h1 {
           justify-content: space-evenly;
 }
 
+.composers_list_entry img {
+  float: right;
+}
+
 body {
   background-color: #ccccff;
   background-image: url(9713eba79ef382a17300fe4cdada2ee0.jpg);
