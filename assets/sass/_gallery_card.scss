@@ -1,0 +1,41 @@
+.gallery-card {
+
+    height: $gallery_card_height;
+    margin: 1rem 1rem;
+
+    box-shadow: 0 0 2rem darken(rgba($ocean_blue, 0.7), 60%);
+
+    @include media-breakpoint-down(md) {
+        height: $mobile_gallery_card_height;
+    }
+
+    >.card-image {
+        height: 80%;
+        >img {
+            height: inherit;
+        }
+    }
+
+    >.card-label {
+        position: relative;
+        height: 20%;
+    }
+
+    .card-avatar {
+        position: absolute;
+        top: -2vh;
+        right: -1vh;
+        width: 4vh;
+        height: 4vh;
+        border-radius: 100%;
+        overflow: hidden;
+        display: block;
+
+        filter: drop-shadow(0, 0, 2rem, darken(rgba($ocean_blue, 0.7), 60%));
+
+        >img {
+            width: inherit;
+            height: inherit;
+        }
+    }
+}
