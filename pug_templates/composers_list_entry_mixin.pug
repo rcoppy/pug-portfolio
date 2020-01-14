@@ -1,11 +1,9 @@
 mixin composers_list_entry_mixin(composer_name, composer_bio, avatar_url, composer_url)
-  .composers-list-entry
+  a.composers-list-entry(href=composer_url)
     .img-container
       img(src=avatar_url)
     .text-copy
-      a(href=composer_url)
-        h3= composer_name
+      h3= composer_name
       p= composer_bio
-  hr
     
     
