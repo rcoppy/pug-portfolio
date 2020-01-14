@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap');
 //@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+
+@import "variables";
+@import "custom";
+
 @import '~bootstrap/scss/bootstrap';
+
+
 
 /*
 @include media-breakpoint-up(xs) { ... }
@@ -10,7 +16,6 @@
 @include media-breakpoint-up(xl) { ... }
 */
 
-@import "variables";
 @import "microclearfix";
 @import "typography";
 
