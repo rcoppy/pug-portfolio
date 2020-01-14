@@ -10280,6 +10280,22 @@ header h1 {
           flex-direction: column;
   border-bottom: 4px solid transparent;
   padding-top: 4px;
+  -webkit-transition: border-bottom-color 0.15s ease-in-out;
+  transition: border-bottom-color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar span {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar span {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 .navbar span a {
   display: -webkit-box;
@@ -10290,6 +10306,14 @@ header h1 {
           justify-content: center;
   -webkit-box-flex: 1;
           flex-grow: 1;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .navbar span a {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 .navbar span:hover {
   background-color: rgba(3, 53, 72, 0.8);
