@@ -47,13 +47,14 @@ body {
 .page-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .wrapper.content {
     z-index: 0;
     box-shadow: 0 0 2rem darken(cadetblue, 40%);
     min-height: 100vh - $header_height - $mobile_footer_height;
+    flex-grow: 1;
 
     @include media-breakpoint-down(md) {
         min-height: 100vh - $mobile_header_height - $mobile_footer_height;
