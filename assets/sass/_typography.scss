@@ -19,7 +19,7 @@ body {
     }
 
 
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: $text_color;
 
     h2 {
@@ -36,10 +36,18 @@ body {
 }
 
 header {
-    font-family: 'Playfair Display', serif;
+    
     color: $header_color;
     
     h1 {
         font-size: 6rem;
+        font-family: 'Odibee Sans', serif;
+    }
+
+    p {
+        font-style: italic;
+        margin: 0; 
+        position: relative;
+        top: -1rem;
     }
 }

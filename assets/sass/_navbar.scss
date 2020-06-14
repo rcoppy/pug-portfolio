@@ -4,7 +4,9 @@
 
     width: 100%;
     height: $navbar_height;
-    background-color: $navbar_color;
+    // background-color: $navbar_color;
+
+
 
     overflow: hidden;
     margin: 0;
@@ -30,6 +32,10 @@
 
         @include transition(border-bottom-color 0.15s ease-in-out);
         @include transition(background-color 0.15s ease-in-out);
+    }
+
+    a {
+        filter: drop-shadow(0 0 0.75rem darken($middle-blue-purple, 30%));
     }
 
     span a {

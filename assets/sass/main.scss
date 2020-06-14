@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap');
+//@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap');
 //@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap');
 
 @import "variables";
 @import "custom";
@@ -29,9 +31,10 @@
 
 
 body {
-    background-color: lighten(blue, 40%);
-    background-image: url('../images/blue_blurred_small.jpg');
-    background-size: cover;
+    // background-color: lighten(blue, 40%);
+    // background-image: url('../images/cartridges_flattened.webp');
+    background: url('../images/cartridges_flattened.webp'), linear-gradient(180deg, $silver-chalice, transparent);
+    background-size: contain;
     background-attachment: fixed;
 
     position: relative;
@@ -52,7 +55,7 @@ body {
 
 .wrapper.content {
     z-index: 0;
-    box-shadow: 0 0 2rem darken(cadetblue, 40%);
+    box-shadow: 0 0 2rem darken($middle-blue-purple, 40%);
     min-height: 100vh - $header_height - $mobile_footer_height;
     flex-grow: 1;
 
@@ -78,8 +81,8 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-    background-color: darken(rgba($ocean_blue, 0.4), 60%);
-    box-shadow: 0 0 2rem darken(rgba($ocean_blue, 0.7), 60%);
+    background-color: darken(rgba($antique-brass, 0.4), 60%);
+    box-shadow: 0 0 2rem darken(rgba($antique-brass, 0.7), 60%);
 
     border-radius: 3px;
 
@@ -88,25 +91,27 @@ body {
     }
 }
 
-header,
-footer {
-    background-color: darken(rgb(100, 0, 255), 40%);
-    background-image: url('../images/black_blurred_small.jpg');
-    background-size: cover;
-    background-position-y: center;
+header, footer {
+    // background-color: darken(rgb(100, 0, 255), 40%);
+    // background-size: cover;
     background-attachment: fixed;
-
     pointer-events: auto;
 }
 
 header {
+    background: linear-gradient(0deg, darken($silver-chalice, 30%), transparent);
+    // background-image: url('../images/ripples.png');
+    // background-repeat: repeat;
+    // background-position-y: center;
+    // background-blend-mode: multiply;
+
     min-height: $header_height;
 
     @include media-breakpoint-down(md) {
         min-height: $mobile_header_height;
     }
 
-    box-shadow: 0 0 2rem darken(cadetblue, 30%);
+    box-shadow: 0 0 2rem darken($middle-blue-purple, 30%);
     position: relative;
     z-index: 2;
 
@@ -127,6 +132,10 @@ h2 {
 footer {
     // position: absolute;
     min-height: $footer_height;
+
+    // background-image: url('../images/black_blurred_small.jpg');
+    background: linear-gradient(180deg, rgba($dark-sienna, 0.95), rgba($dark-sienna, 0.8));
+    background-position-y: center;
 
     @include media-breakpoint-down(md) {
         min-height: $mobile_footer_height;
