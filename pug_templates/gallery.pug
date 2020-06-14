@@ -1,0 +1,11 @@
+extends page_template.pug
+
+block content 
+  h2 Gallery
+  p Explore student-submitted compositions!
+  
+  .gallery-collection
+    - var n = 0;
+    while n < 20
+      - n++
+      include dummy_gallery_card

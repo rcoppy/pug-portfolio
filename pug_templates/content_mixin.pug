@@ -1,0 +1,4 @@
+mixin content_mixin
+  .wrapper.content
+    .container.content
+      block

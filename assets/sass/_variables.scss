@@ -1,0 +1,21 @@
+$ocean_blue:#5799B6;
+$dark_transparent_ocean_blue: darken(rgba($ocean_blue, 0.4), 60%);
+$header_color: darken(rgba(255,255,255,0.92), 3%);
+$navbar_color: rgba(2, 35, 48, 0.8);
+
+$hyperlink_color: lighten($ocean_blue, 20%);
+$hyperlink_hover_color: lighten($ocean_blue, 30%);
+
+$text_color: darken(rgba(255,255,255,0.85), 7%);
+
+$navbar_height: 8vh;
+$header_height: 24vh + $navbar_height;
+$footer_height: 20vh;
+$gallery_card_height: (100vh - $header_height - $footer_height - 6vh) / 1.5;
+
+$mobile_header_height: 65vh + $navbar_height;
+$mobile_footer_height: 40vh;
+$mobile_gallery_card_height: 40vh;
+
+
+

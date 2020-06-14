@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap');
+//@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+
+@import "variables";
+@import "custom";
+
+@import '~bootstrap/scss/bootstrap';
+
+
+
+/*
+@include media-breakpoint-up(xs) { ... }
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }
+@include media-breakpoint-up(lg) { ... }
+@include media-breakpoint-up(xl) { ... }
+*/
+
+@import "microclearfix";
+@import "typography";
+
+@import "content_banner";
+
+@import "navbar";
+@import "gallery_card";
+@import "gallery";
+@import "composers_list";
+@import "composers_list_entry";
+
+
+body {
+    background-color: lighten(blue, 40%);
+    background-image: url('../images/blue_blurred_small.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+    min-height: 100vh;
+    
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.wrapper.content {
+    z-index: 0;
+    box-shadow: 0 0 2rem darken(cadetblue, 40%);
+    min-height: 100vh - $header_height;
+
+    @include media-breakpoint-down(md) {
+        min-height: 100vh - $mobile_header_height;
+        padding-bottom: $mobile_footer_height;
+    }
+
+    padding-bottom: $footer_height;
+    padding-top: 1rem;
+    //margin-top: -1rem;
+
+    pointer-events: none;
+}
+
+.container.content {
+    
+    pointer-events: auto;
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    background-color: darken(rgba($ocean_blue, 0.4), 60%);
+    box-shadow: 0 0 2rem darken(rgba($ocean_blue, 0.7), 60%);
+
+    border-radius: 3px;
+
+    @include media-breakpoint-down(md) {
+        max-width: 95%;
+    }
+}
+
+header,
+footer {
+    background-color: darken(rgb(100, 0, 255), 40%);
+    background-image: url('../images/black_blurred_small.jpg');
+    background-size: cover;
+    background-position-y: center;
+    background-attachment: fixed;
+
+    pointer-events: auto;
+}
+
+header {
+    height: $header_height;
+
+    @include media-breakpoint-down(md) {
+        height: $mobile_header_height;
+    }
+
+    box-shadow: 0 0 2rem darken(cadetblue, 30%);
+    position: relative;
+    z-index: 2;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    div.container {}
+}
+
+h1,
+h2 {
+    filter: drop-shadow(0 3px 0.75rem darken($header_color, 70%));
+}
+
+footer {
+    position: absolute;
+    height: $footer_height;
+
+    @include media-breakpoint-down(md) {
+        height: $mobile_footer_height;
+        // bottom: $mobile_footer_height;
+    }
+
+    width: 100%;
+    // bottom: $footer_height;
+    bottom: 0;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+    padding-top: 2rem;
+}
+
+p img {
+    // max-width: 20%;
+    border-radius: 5px;
+    margin: 0.5rem 1.5rem;
+
+    &.float-right,
+    &.float-left {
+        // on tiny display actually ignore float
+        float: none;
+        margin: 2.2rem 10%;
+        width: 80%;
+
+        @include media-breakpoint-up(md) {
+            margin: 1rem 0.5rem;
+            max-width: 25%;
+            max-height: 80%;
+        }
+    }
+
+    &.float-left {
+        @include media-breakpoint-up(md) {
+            float: left;
+        }
+    }
+
+    &.float-right {
+        @include media-breakpoint-up(md) {
+            float: right;
+        }
+    }
+
+
+}

@@ -1,0 +1,45 @@
+{
+  "name": "composer-static-pages",
+  "version": "1.0.0",
+  "description": "Composer app static pages",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcoppy/composer-static-pages.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Alex Rupp-Coppi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcoppy/composer-static-pages/issues"
+  },
+  "homepage": "https://github.com/rcoppy/composer-static-pages#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
+    "precss": "^4.0.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.2",
+    "css-loader": "^3.2.0",
+    "fibers": "^4.0.1",
+    "file-loader": "^4.3.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.22.10",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
