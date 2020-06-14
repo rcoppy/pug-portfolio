@@ -1,11 +1,18 @@
 const path = require('path');
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = (env, options) => {
     return {
-        watch: true,
-        mode: 'development',
+        devServer: {
+            contentBase: path.join(__dirname, 'dist'),
+            compress: true,
+            port: 9000,
+            watchContentBase: true,
+        },
+        // mode: 'production',
         entry: {
             main: ['./src/index.js', './assets/sass/main.scss'],
         },
@@ -13,7 +20,10 @@ module.exports = (env, options) => {
             filename: '[name].js',
             path: path.resolve(__dirname, 'dist'),
         },
-        plugins: [new MiniCssExtractPlugin("[name].css")],
+        plugins: [new MiniCssExtractPlugin('[name].css'), 
+                  new HtmlWebpackPlugin({
+                    template: './src/index.pug'
+                  })],
         module: {
             rules: [{
                     test: /\.(scss)$/,
@@ -67,6 +77,10 @@ module.exports = (env, options) => {
                             outputPath: 'fonts/'
                         }
                     }],
+                },
+                {
+                    test: /\.pug$/,
+                    loader: 'pug-loader'
                 },
             ],
 
