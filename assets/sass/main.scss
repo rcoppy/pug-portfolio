@@ -26,8 +26,7 @@
 @import "navbar";
 @import "gallery_card";
 @import "gallery";
-@import "composers_list";
-@import "composers_list_entry";
+@import "image_frame";
 
 
 body {
@@ -59,6 +58,9 @@ body {
     min-height: 100vh - $header_height - $mobile_footer_height;
     flex-grow: 1;
 
+    background: url('../images/lilypads_tinted.png'); 
+    background-repeat: repeat;
+
     @include media-breakpoint-down(md) {
         min-height: 100vh - $mobile_header_height - $mobile_footer_height;
         // padding-bottom: $mobile_footer_height;
@@ -81,7 +83,7 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-    background-color: darken(rgba($antique-brass, 0.4), 60%);
+    background-color: darken(saturate(rgba($antique-brass, 0.4), 30%), 50%);
     box-shadow: 0 0 2rem darken(rgba($antique-brass, 0.7), 60%);
 
     border-radius: 3px;
@@ -99,7 +101,7 @@ header, footer {
 }
 
 header {
-    background: linear-gradient(0deg, darken($silver-chalice, 30%), transparent);
+    background: linear-gradient(0deg, desaturate(lighten($dark-sienna, 6%), 14%), transparent);
     // background-image: url('../images/ripples.png');
     // background-repeat: repeat;
     // background-position-y: center;
@@ -120,8 +122,6 @@ header {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-
-    div.container {}
 }
 
 h1,
@@ -184,5 +184,34 @@ p img {
         }
     }
 
+}
 
+.vertical-centered {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+        flex-direction: column;
+    }
+}
+
+.link-collection {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 80%;
+
+    span {
+        margin: 0 0.4rem;
+    }
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+hr {
+    width: 66%;
+    border-top: 1px dashed desaturate(lighten($middle-blue-purple, 15%), 20%);
 }

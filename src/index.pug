@@ -1,5 +1,26 @@
 extends page_template.pug
+include image_frame_mixin.pug
 
 block content 
-  h2 Hello there!
-  p This is a test of mixins and includes.
+  section#about
+    h2: strong Hello there!
+    .vertical-centered.ml-3
+      +image_frame_mixin(require('../assets/images/kittycat.jpg'))(class='small circle square shadow float-left')
+      p.ml-3.mt-3 I am an aspiring <strong>code geezer</strong>, pleez hire me 🙏
+
+  hr
+
+  section#code
+    h3 ~Code~
+    p Look at all these beautiful instruction sets i've geezered!
+    p.ml-3: a(href='https://www.youtube.com/watch?v=oHg5SJYRHA0') *theoretically a github link*
+
+  hr
+
+  section#contact
+    h3 Wanna get in touch??
+    .link-collection
+      span: a(href='google.com') linkedIn
+      span: a(href='google.com') wechat? idk rofl
+      span blahblah
+      span lorem ipsum

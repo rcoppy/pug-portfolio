@@ -11,8 +11,8 @@ $dark-sienna: #450920ff;
 $header_color: darken(rgba(255,255,255,0.92), 3%);
 $navbar_color: rgba($dark-sienna, 0.8);
 
-$hyperlink_color: lighten($middle-blue-purple, 20%);
-$hyperlink_hover_color: saturate(lighten($middle-blue-purple, 30%), 40%);
+$hyperlink_color: saturate(lighten($middle-blue-purple, 27%), 75%);
+$hyperlink_hover_color: saturate(lighten($middle-blue-purple, 30%), 100%);
 
 $text_color: darken(rgba(255,255,255,0.85), 7%);
 

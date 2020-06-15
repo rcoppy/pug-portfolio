@@ -1,0 +1,74 @@
+.image_frame {
+    overflow: hidden;
+
+    img {
+        width: 100%;
+
+        &.float-left {
+            @include media-breakpoint-up(md) {
+                float: left;
+            }
+        }
+
+        &.float-right {
+            @include media-breakpoint-up(md) {
+                float: right;
+            }
+        }
+    }
+
+    &:not(.circle) {
+        box-shadow: 0 0 $black-coffee;
+    }
+
+    &.circle {
+        border-radius: 100%;
+        filter: drop-shadow(0 0 0.5rem $black-coffee)
+    }
+
+
+    @include media-breakpoint-down(sm) {
+        &.square {
+            width: 80vw; 
+            height: 80vw;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        &.small {
+            width: 5vw;
+
+            &.square {
+                height: 5vw;
+            }
+
+            &.four-by-three {
+                height: 3.3vw;
+            }
+        }
+
+        &.medium {
+            width: 13vw;
+
+            &.square {
+                height: 13vw;
+            }
+
+            &.four-by-three {
+                height: 9vw;
+            }
+        }
+
+        &.large {
+            width: 27vw;
+
+            &.square {
+                height: 27vw;
+            }
+
+            &.four-by-three {
+                height: 21vw;
+            }
+        }
+    }
+}
