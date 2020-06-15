@@ -4,7 +4,7 @@
 *.scss.map
 
 # webpack build results
-dist/
+#/dist
 
 # Logs
 logs
