@@ -25,6 +25,9 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "jquery": "^3.5.1",
+    "jstransformer-markdown-it": "^2.1.0",
+    "markdown-it": "^11.0.0",
+    "markdown-loader": "^5.1.0",
     "popper.js": "^1.16.0",
     "precss": "^4.0.0",
     "pug": "^2.0.4"

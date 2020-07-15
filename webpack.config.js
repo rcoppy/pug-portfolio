@@ -2,6 +2,7 @@ const path = require('path');
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MarkdownIt = require('markdown-it');
 
 
 module.exports = (env, options) => {
@@ -9,6 +10,7 @@ module.exports = (env, options) => {
         devServer: {
             contentBase: path.join(__dirname, 'dist'),
             compress: true,
+            host: '0.0.0.0',
             port: 9000,
             watchContentBase: true,
         },

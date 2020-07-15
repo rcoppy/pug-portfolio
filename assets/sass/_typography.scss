@@ -39,6 +39,11 @@ body {
     @include media-breakpoint-up(md) {
         font-size: 0.95rem;
     }
+
+    code {
+        background-color: $code_background_color;
+        border-radius: 2px;
+    }
 }
 
 header {

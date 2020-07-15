@@ -14,7 +14,10 @@ $navbar_color: rgba($dark-sienna, 0.8);
 $hyperlink_color: saturate(lighten($middle-blue-purple, 27%), 75%);
 $hyperlink_hover_color: saturate(lighten($middle-blue-purple, 30%), 100%);
 
-$text_color: darken(rgba(255,255,255,0.85), 7%);
+$text_color: rgba(lighten($silver-chalice, 7%), 0.91);
+
+$code_background_color: $silver-chalice;
+$code_text_color: darken($middle-blue-purple, 15%);
 
 $navbar_height: 8vh;
 $header_height: 30vh + $navbar_height;
