@@ -42,7 +42,21 @@ body {
 
     code {
         background-color: $code_background_color;
-        border-radius: 2px;
+        border-radius: $code_border_radius;
+        border: 1px solid darken($code_background_color, 15%);
+    }
+
+    pre {
+        code {
+            background: none;
+            color: $code_text_color;
+            border: none;
+        }
+
+        padding: 0.4rem 0.7rem;
+        background-color: $code_background_color;
+        border-radius: $code_border_radius;
+        border: 1px solid darken($code_background_color, 15%);
     }
 }
 

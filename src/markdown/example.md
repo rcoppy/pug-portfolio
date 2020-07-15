@@ -21,7 +21,13 @@ http://www.dossamer.io/
 If you want to [give a link a custom title](https://www.google.com/), you can *still* do that. 
 
 ```
-This is a code block.
+// This is a code block.
+
+if (thisIsRenderedCorrectly) {
+    itShouldLookPretty(true);
+} else {
+    console.log('fudgeNuggets');
+}
 ```
 
 `This is some code that should be formatted.`

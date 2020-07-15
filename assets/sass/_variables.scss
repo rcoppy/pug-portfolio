@@ -18,6 +18,7 @@ $text_color: rgba(lighten($silver-chalice, 7%), 0.91);
 
 $code_background_color: $silver-chalice;
 $code_text_color: darken($middle-blue-purple, 15%);
+$code_border_radius: 4px; 
 
 $navbar_height: 8vh;
 $header_height: 30vh + $navbar_height;
