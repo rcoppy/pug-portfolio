@@ -41,7 +41,7 @@ body {
 
     // background-color: lighten(blue, 40%);
     // background-image: url('../images/cartridges_flattened.webp');
-    background: url('../images/cartridges_flattened.webp'), linear-gradient(180deg, $silver-chalice, transparent);
+    background: url('../images/cartridges_flattened.webp'), linear-gradient(180deg, $champagne-pink, transparent);
     background-size: contain;
     background-attachment: fixed;
 
@@ -112,7 +112,7 @@ header, footer {
 }
 
 header {
-    background: linear-gradient(0deg, #711a3bd1, rgba($light-pink, 0.2));
+    background: linear-gradient(0deg, #711a3bd1, rgba($piggy-pink, 0.2));
     background-attachment: scroll;
     
     // background-image: url('../images/ripples.png');
@@ -141,7 +141,7 @@ footer {
     // position: absolute;
     min-height: $footer_height;
 
-    color: $light-chalice;
+    color: $champagne-pink;
 
     a { 
         color: $darkmode_hyperlink_color; 
@@ -152,7 +152,7 @@ footer {
     }
 
     // background-image: url('../images/black_blurred_small.jpg');
-    background: linear-gradient(180deg, rgba($dark-sienna, 0.95), rgba($dark-sienna, 0.8));
+    background: linear-gradient(180deg, rgba($black-coffee, 0.95), rgba($black-coffee, 0.8));
     background-position-y: center;
 
     @include media-breakpoint-down(md) {

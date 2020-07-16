@@ -1,5 +1,5 @@
 .gallery-card:hover {
-    box-shadow: 0 0 2rem lighten(rgba($ocean_blue, 0.7), 10%);
+    box-shadow: 0 0 2rem lighten(rgba($middle-blue-purple, 0.7), 10%);
 }
 .gallery-card {
     
@@ -15,7 +15,7 @@
     flex-direction: column;
     //overflow: hidden;
 
-    box-shadow: 0 0 2rem darken(rgba($ocean_blue, 0.7), 60%);
+    box-shadow: 0 0 2rem darken(rgba($middle-blue-purple, 0.7), 60%);
 
     @include media-breakpoint-down(md) {
         max-height: calc(#{$mobile_gallery_card_height} + #{$min_label_height});
@@ -37,7 +37,7 @@
 
     >.card-label {
         position: relative;
-        background-color: $dark_transparent_ocean_blue;
+        background-color: $black-coffee;
 
         >.label-links {
             width: calc(100% - 6vh);
@@ -66,7 +66,7 @@
         overflow: hidden;
         display: block;
 
-        filter: drop-shadow(0 0 0.5rem darken(rgba($ocean_blue, 0.7), 60%));
+        filter: drop-shadow(0 0 0.5rem darken(rgba($middle-blue-purple, 0.7), 60%));
 
         >img {
             width: inherit;

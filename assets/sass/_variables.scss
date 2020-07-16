@@ -1,18 +1,14 @@
-$ocean_blue:#5799B6;
-$dark_transparent_ocean_blue: darken(rgba($ocean_blue, 0.4), 60%);
-$orange_brown: #81796a;
-
+// colors
 $middle-blue-purple: #8e7dbeff;
 $antique-brass: #c19f87ff;
-$silver-chalice: #aeaaa0ff;
-$light-chalice: #E5D9D0ff;
+$pacific-blue: #23B5D3ff;
+$champagne-pink: #E5D9D0ff;
 $black-coffee: #3b2c35ff;
-$dark-sienna: rgb(82, 13, 39); // #450920ff;
-$light-pink: #ffdfeb;
+$piggy-pink: #ffdfeb;
 
-
-$header_color: $dark-sienna; // #ffdfeb; // lighten($light-chalice, 9%); //darken(rgba(255,255,255,0.92), 3%);
-$navbar_color: rgba($dark-sienna, 0.8);
+// assignments
+$header_color: $black-coffee; // #ffdfeb; // lighten($light-chalice, 9%); //darken(rgba(255,255,255,0.92), 3%);
+$navbar_color: rgba($black-coffee, 0.8);
 
 $hyperlink_color: saturate(darken($middle-blue-purple, 20%), 70%);
 $hyperlink_hover_color: lighten($hyperlink_color, 25%);
@@ -20,10 +16,10 @@ $hyperlink_hover_color: lighten($hyperlink_color, 25%);
 $darkmode_hyperlink_color: saturate(lighten($middle-blue-purple, 27%), 75%);
 $darkmode_hyperlink_hover_color: saturate(lighten($middle-blue-purple, 30%), 100%);
 
-$text_color: $dark-sienna; // lighten(#E5D9D0, 20%); // rgba(lighten($silver-chalice, 7%), 0.91);
+$text_color: $black-coffee; // lighten(#E5D9D0, 20%); // rgba(lighten($silver-chalice, 7%), 0.91);
 $text_background_color: desaturate(lighten($antique-brass, 10%), 15%); // #5F1F38;
 
-$code_background_color: darken($light-chalice, 10%);
+$code_background_color: darken($champagne-pink, 10%);
 $code_text_color: darken($middle-blue-purple, 25%);
 $code_border_radius: 4px; 
 

@@ -7,8 +7,8 @@
     @include media-breakpoint-down(sm) {
         width: 100%;
 
-        background: desaturate(lighten(rgba($dark-sienna, 0.7), 25%), 25%);
-        box-shadow: 0 0 8px desaturate(lighten(rgba($dark-sienna, 0.7), 25%), 25%);
+        background: desaturate(lighten(rgba($black-coffee, 0.7), 25%), 25%);
+        box-shadow: 0 0 8px desaturate(lighten(rgba($black-coffee, 0.7), 25%), 25%);
     }
 
     height: $navbar_height;
@@ -43,7 +43,7 @@
     }
 
     a {
-        filter: drop-shadow(0 0 4px $light-chalice);
+        filter: drop-shadow(0 0 4px $champagne-pink);
         font-weight: 600; 
         font-size: 1.25rem;
         color: saturate($header_color, 20%);
