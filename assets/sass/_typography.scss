@@ -11,6 +11,7 @@ body {
     a {
         color: $hyperlink_color;
         text-decoration: none;
+        font-weight: 600;
     }
 
     a:hover {
@@ -21,6 +22,10 @@ body {
 
     font-family: 'Open Sans', sans-serif;
     color: $text_color;
+
+    h1, h2, h3 {
+        color: saturate($text_color, 20%);
+    }
 
     h2 {
         font-weight: bold;
@@ -62,17 +67,24 @@ body {
 
 header {
     
-    color: $header_color;
-    
     h1 {
+        // color: $header_color;
         font-size: 6rem;
         font-family: 'Odibee Sans', serif;
+        filter: drop-shadow(0 3px 14px $light-chalice);    
+        color: $header_color;
     }
 
     p {
-        font-style: italic;
+        font-weight: 600;
+        font-size: 1.3rem;
         margin: 0; 
-        position: relative;
-        top: -1rem;
+        
+        //filter: drop-shadow(0 3px 0.35rem darken($silver-chalice, 20%));
+
+        @media (min-width: 480px) {
+            position: relative; 
+            top: -1rem;
+        }
     }
 }

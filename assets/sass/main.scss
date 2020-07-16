@@ -30,6 +30,15 @@
 
 
 body {
+
+    // need custom offset for backgrounds on phone screens
+    @include media-breakpoint-down(sm) {
+        background-position-y: 163px;
+        background-position-x: -24px;
+    }
+
+    background-position: 0 0;
+
     // background-color: lighten(blue, 40%);
     // background-image: url('../images/cartridges_flattened.webp');
     background: url('../images/cartridges_flattened.webp'), linear-gradient(180deg, $silver-chalice, transparent);
@@ -83,10 +92,12 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-    background-color: darken(saturate(rgba($antique-brass, 0.4), 30%), 50%);
-    box-shadow: 0 0 2rem darken(rgba($antique-brass, 0.7), 60%);
+    background-attachment: fixed;
+    background: linear-gradient(12deg, darken(rgba($text_background_color, 0.54), 20%), 
+                                      rgba($text_background_color, 0.24)); // darken(saturate(rgba($antique-brass, 0.4), 30%), 50%);
+    box-shadow: 0 0 2rem darken(rgba($text_background_color, 0.7), 60%);
 
-    border-radius: 3px;
+    border-radius: 6px;
 
     @include media-breakpoint-down(md) {
         max-width: 95%;
@@ -101,7 +112,9 @@ header, footer {
 }
 
 header {
-    background: linear-gradient(0deg, desaturate(lighten($dark-sienna, 6%), 14%), transparent);
+    background: linear-gradient(0deg, #711a3bd1, rgba($light-pink, 0.2));
+    background-attachment: scroll;
+    
     // background-image: url('../images/ripples.png');
     // background-repeat: repeat;
     // background-position-y: center;
@@ -124,14 +137,19 @@ header {
     flex-direction: column;
 }
 
-h1,
-h2 {
-    filter: drop-shadow(0 3px 0.75rem darken($header_color, 70%));
-}
-
 footer {
     // position: absolute;
     min-height: $footer_height;
+
+    color: $light-chalice;
+
+    a { 
+        color: $darkmode_hyperlink_color; 
+        
+        &:hover {
+            color: $darkmode_hyperlink_hover_color;
+        }
+    }
 
     // background-image: url('../images/black_blurred_small.jpg');
     background: linear-gradient(180deg, rgba($dark-sienna, 0.95), rgba($dark-sienna, 0.8));

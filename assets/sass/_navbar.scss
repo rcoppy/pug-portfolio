@@ -3,6 +3,14 @@
     $border_bottom_width: 4px;
 
     width: 65%;
+    
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+
+        background: desaturate(lighten(rgba($dark-sienna, 0.7), 25%), 25%);
+        box-shadow: 0 0 8px desaturate(lighten(rgba($dark-sienna, 0.7), 25%), 25%);
+    }
+
     height: $navbar_height;
     // background-color: $navbar_color;
 
@@ -35,7 +43,17 @@
     }
 
     a {
-        filter: drop-shadow(0 0 0.75rem darken($middle-blue-purple, 30%));
+        filter: drop-shadow(0 0 4px $light-chalice);
+        font-weight: 600; 
+        font-size: 1.25rem;
+        color: saturate($header_color, 20%);
+        padding: 0.5rem 0; 
+
+        /* color: $darkmode_hyperlink_color;
+        
+        &:hover {
+            color: $darkmode_hyperlink_hover_color;
+        }*/ 
     }
 
     span a {
@@ -50,5 +68,10 @@
     span:hover {
         background-color: lighten($navbar_color, 5%);
         border-bottom: $border_bottom_width solid lighten($navbar_color, 25%);
+
+        a {
+            filter: none; 
+            color: $darkmode_hyperlink_color;
+        }
     }
 }
