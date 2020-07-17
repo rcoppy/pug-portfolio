@@ -2,19 +2,21 @@
 $middle-blue-purple: #8e7dbeff;
 $antique-brass: #c19f87ff;
 $pacific-blue: #23B5D3ff;
+$neon-blue: #35C2F0ff;
 $champagne-pink: #E5D9D0ff;
 $black-coffee: #3b2c35ff;
 $piggy-pink: #ffdfeb;
+$cartridge-red: #F70001ff;
 
 // assignments
 $header_color: $black-coffee; // #ffdfeb; // lighten($light-chalice, 9%); //darken(rgba(255,255,255,0.92), 3%);
 $navbar_color: rgba($black-coffee, 0.8);
 
-$hyperlink_color: saturate(darken($middle-blue-purple, 20%), 70%);
-$hyperlink_hover_color: lighten($hyperlink_color, 25%);
+$hyperlink_color: desaturate(darken($neon-blue, 25%), 20%); // saturate(darken($middle-blue-purple, 20%), 70%);
+$hyperlink_hover_color: lighten($hyperlink_color, 10%);
 
-$darkmode_hyperlink_color: saturate(lighten($middle-blue-purple, 27%), 75%);
-$darkmode_hyperlink_hover_color: saturate(lighten($middle-blue-purple, 30%), 100%);
+$darkmode_hyperlink_color: saturate(lighten($neon-blue, 27%), 75%);
+$darkmode_hyperlink_hover_color: saturate(lighten($neon-blue, 30%), 100%);
 
 $text_color: $black-coffee; // lighten(#E5D9D0, 20%); // rgba(lighten($silver-chalice, 7%), 0.91);
 $text_background_color: desaturate(lighten($antique-brass, 10%), 15%); // #5F1F38;

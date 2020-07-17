@@ -2,13 +2,16 @@
 
     $border_bottom_width: 4px;
 
+    position: relative; 
+    top: -1 * $border_bottom_width;
+
     width: 65%;
     
     @include media-breakpoint-down(sm) {
         width: 100%;
 
-        background: desaturate(lighten(rgba($black-coffee, 0.7), 25%), 25%);
-        box-shadow: 0 0 8px desaturate(lighten(rgba($black-coffee, 0.7), 25%), 25%);
+        // background: desaturate(lighten(rgba($black-coffee, 0.7), 25%), 25%);
+        // box-shadow: 0 0 8px desaturate(lighten(rgba($black-coffee, 0.7), 25%), 25%);
     }
 
     height: $navbar_height;
@@ -35,17 +38,25 @@
         display: flex;
         flex-direction: column;
         // box-sizing: border-box;
-        border-bottom: $border_bottom_width solid transparent;
+        
+        border-left: $border_bottom_width solid rgba($black-coffee, 0);
+        border-right: $border_bottom_width solid rgba($black-coffee, 0);
+        
         padding-top: $border_bottom_width;
+        
+        border-radius: 0px; 
+        // background-color: rgba($black-coffee, 0);
 
-        @include transition(border-bottom-color 0.15s ease-in-out);
+        @include transition(border-bottom 0.15s ease-in-out);
         @include transition(background-color 0.15s ease-in-out);
+        @include transition(border-radius 0.3s ease-out);
     }
 
     a {
-        filter: drop-shadow(0 0 4px $champagne-pink);
+        filter: drop-shadow(0 0 4px $middle-blue-purple);
         font-weight: 600; 
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+
         color: saturate($header_color, 20%);
         padding: 0.5rem 0; 
 
@@ -63,15 +74,24 @@
         flex-grow: 1;
 
         @include transition(color 0.15s ease-in-out);
+        @include transition(filter 0.15s ease-in-out);
     }
 
     span:hover {
-        background-color: lighten($navbar_color, 5%);
-        border-bottom: $border_bottom_width solid lighten($navbar_color, 25%);
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px; 
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px; 
+
+        // background-color: rgba($black-coffee, 0.7);
+        border-left: $border_bottom_width solid $header_color;
+        border-right: $border_bottom_width solid $header_color;
+
+        filter: drop-shadow(0 0 8px $champagne-pink);
 
         a {
-            filter: none; 
-            color: $darkmode_hyperlink_color;
+            filter: drop-shadow(0 0 4px $champagne-pink);
+            color: $header_color;
         }
     }
 }

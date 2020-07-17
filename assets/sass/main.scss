@@ -67,8 +67,9 @@ body {
     min-height: 100vh - $header_height - $mobile_footer_height;
     flex-grow: 1;
 
-    background: url('../images/lilypads_tinted.png'); 
+    background: $champagne-pink url('../images/burningpaper_skewed.webp'); 
     background-repeat: repeat;
+    background-size: 30%;
 
     @include media-breakpoint-down(md) {
         min-height: 100vh - $mobile_header_height - $mobile_footer_height;
@@ -93,8 +94,8 @@ body {
     margin-bottom: 1rem;
 
     background-attachment: fixed;
-    background: linear-gradient(12deg, darken(rgba($text_background_color, 0.54), 20%), 
-                                      rgba($text_background_color, 0.24)); // darken(saturate(rgba($antique-brass, 0.4), 30%), 50%);
+    background: linear-gradient(12deg, darken(rgba($text_background_color, 0.78), 20%), 
+                                      rgba($text_background_color, 0.78)); // darken(saturate(rgba($antique-brass, 0.4), 30%), 50%);
     box-shadow: 0 0 2rem darken(rgba($text_background_color, 0.7), 60%);
 
     border-radius: 6px;
@@ -112,7 +113,7 @@ header, footer {
 }
 
 header {
-    background: linear-gradient(0deg, #711a3bd1, rgba($piggy-pink, 0.2));
+    background: linear-gradient(0deg, $neon-blue, rgba($neon-blue, 0.2)); // linear-gradient(0deg, #711a3bd1, rgba($piggy-pink, 0.2));
     background-attachment: scroll;
     
     // background-image: url('../images/ripples.png');
@@ -144,6 +145,8 @@ footer {
     color: $champagne-pink;
 
     a { 
+        @include transition(color 0.15s ease-in-out);
+
         color: $darkmode_hyperlink_color; 
         
         &:hover {
