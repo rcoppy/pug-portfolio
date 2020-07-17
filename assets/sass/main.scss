@@ -69,7 +69,11 @@ body {
 
     background: $champagne-pink url('../images/burningpaper_skewed.webp'); 
     background-repeat: repeat;
-    background-size: 30%;
+    background-size: 165%; 
+    
+    @include media-breakpoint-up(md) {
+        background-size: 30%;
+    }
 
     @include media-breakpoint-down(md) {
         min-height: 100vh - $mobile_header_height - $mobile_footer_height;
