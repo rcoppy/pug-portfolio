@@ -70,6 +70,7 @@ body {
     background: $champagne-pink url('../images/burningpaper_skewed.webp'); 
     background-repeat: repeat;
     background-size: 165%; 
+    background-attachment: fixed;
     
     @include media-breakpoint-up(md) {
         background-size: 30%;
