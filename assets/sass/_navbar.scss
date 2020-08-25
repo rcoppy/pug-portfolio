@@ -87,10 +87,10 @@
         border-left: $border_bottom_width solid $header_color;
         border-right: $border_bottom_width solid $header_color;
 
-        filter: drop-shadow(0 0 8px $champagne-pink);
+        filter: drop-shadow(0 0 4px lighten($middle-blue-purple, 15%));
 
         a {
-            filter: drop-shadow(0 0 4px $champagne-pink);
+            // filter: drop-shadow(0 0 4px lighten($middle-blue-purple, 15%));
             color: $header_color;
         }
     }
