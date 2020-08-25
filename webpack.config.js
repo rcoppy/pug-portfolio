@@ -1,8 +1,10 @@
 const path = require('path');
+const glob = require('glob-all');
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MarkdownIt = require('markdown-it');
+const PurgecssPlugin = require('purgecss-webpack-plugin'); // <-- can potentially strip out unused bootstrap (preliminary setup wasn't successful--broke certain page styling)
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 
 module.exports = (env, options) => {
@@ -22,10 +24,21 @@ module.exports = (env, options) => {
             filename: '[name].js',
             path: path.resolve(__dirname, 'dist'),
         },
+        // uglifyjs
+        optimization: {
+            minimizer: [new UglifyJsPlugin()]
+        },
         plugins: [new MiniCssExtractPlugin('[name].css'), 
+                //   new PurgecssPlugin({
+                //     paths: glob.sync([
+                //         `${path.join(__dirname, 'src')}/**/*`,
+                //         `${path.join(__dirname, 'assets')}/**/*`,
+                //     ], { nodir: true }),
+                //   }),
                   new HtmlWebpackPlugin({
                     template: './src/index.pug'
-                  })],
+                  }),
+                ],
         module: {
             rules: [{
                     test: /\.(scss)$/,

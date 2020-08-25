@@ -68,8 +68,8 @@ body {
 header {
     
     h1 {
-        // color: $header_color;
         font-size: 6rem;
+        font-weight: normal;
         font-family: 'Odibee Sans', serif;
         filter: drop-shadow(0 3px 7px $middle-blue-purple);    
         color: $header_color;

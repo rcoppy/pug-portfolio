@@ -6,7 +6,8 @@
 @import "variables";
 @import "custom";
 
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/bootstrap-reboot';
 
 
 
@@ -73,7 +74,7 @@ body {
     background-attachment: fixed;
     
     @include media-breakpoint-up(md) {
-        background-size: 30%;
+        background-size: 45%;
     }
 
     @include media-breakpoint-down(md) {
@@ -95,12 +96,19 @@ body {
     padding-top: 1rem;
     padding-bottom: 1rem;
 
+    @include media-breakpoint-up(md) {
+        width: 50%;
+        padding: 1rem 2rem;
+    }
+
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-    background-attachment: fixed;
-    background: linear-gradient(12deg, darken(rgba($text_background_color, 0.78), 20%), 
-                                      rgba($text_background_color, 0.78)); // darken(saturate(rgba($antique-brass, 0.4), 30%), 50%);
+    // background-attachment: fixed;
+    
+    background: darken(rgba($text_background_color, 0.83), 7%);
+    // background: linear-gradient(12deg, darken(rgba($text_background_color, 0.78), 20%), 
+    //                                   rgba($text_background_color, 0.78)); // darken(saturate(rgba($antique-brass, 0.4), 30%), 50%);
     box-shadow: 0 0 2rem darken(rgba($text_background_color, 0.7), 60%);
 
     border-radius: 6px;
