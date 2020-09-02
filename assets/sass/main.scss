@@ -118,6 +118,7 @@ header {
     background: linear-gradient(0deg, $header-dark-blue, rgba($header-dark-blue, 0.2));
     background-attachment: scroll;
     
+    width: 100%;
     min-height: $header_height;
 
     @include media-breakpoint-down(md) {
