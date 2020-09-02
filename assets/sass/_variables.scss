@@ -10,17 +10,17 @@ $cartridge-red: #F70001ff;
 $header-dark-blue: #708ad2;
 
 // assignments
-$header_color: $black-coffee; // #ffdfeb; // lighten($light-chalice, 9%); //darken(rgba(255,255,255,0.92), 3%);
+$header_color: $black-coffee;
 $navbar_color: rgba($black-coffee, 0.8);
 
-$hyperlink_color: desaturate(darken($neon-blue, 25%), 20%); // saturate(darken($middle-blue-purple, 20%), 70%);
+$hyperlink_color: desaturate(darken($neon-blue, 25%), 20%);
 $hyperlink_hover_color: lighten($hyperlink_color, 10%);
 
 $darkmode_hyperlink_color: saturate(lighten($neon-blue, 27%), 75%);
 $darkmode_hyperlink_hover_color: saturate(lighten($neon-blue, 30%), 100%);
 
-$text_color: $black-coffee; // lighten(#E5D9D0, 20%); // rgba(lighten($silver-chalice, 7%), 0.91);
-$text_background_color: desaturate(lighten($antique-brass, 10%), 15%); // #5F1F38;
+$text_color: $black-coffee;
+$text_background_color: desaturate(lighten($antique-brass, 10%), 15%);
 
 $code_background_color: darken($champagne-pink, 10%);
 $code_text_color: darken($middle-blue-purple, 25%);

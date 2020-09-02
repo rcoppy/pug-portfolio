@@ -1,6 +1,8 @@
 //@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display&display=swap');
 //@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
 
+// FYI order of imports matters
+
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap');
 
 @import "variables";
@@ -25,8 +27,6 @@
 @import "content_banner";
 
 @import "navbar";
-@import "gallery_card";
-@import "gallery";
 @import "image_frame";
 
 
@@ -40,8 +40,6 @@ body {
 
     background-position: 0 0;
 
-    // background-color: lighten(blue, 40%);
-    // background-image: url('../images/cartridges_flattened.webp');
     background: url('../images/cartridges_flattened.webp'), linear-gradient(180deg, $champagne-pink, transparent);
     background-size: contain;
     background-attachment: fixed;
@@ -73,20 +71,16 @@ body {
     background-size: 165%; 
     background-attachment: fixed;
     
+    padding-top: 1rem;
+    pointer-events: none;
+
     @include media-breakpoint-up(md) {
         background-size: 45%;
     }
 
     @include media-breakpoint-down(md) {
         min-height: 100vh - $mobile_header_height - $mobile_footer_height;
-        // padding-bottom: $mobile_footer_height;
     }
-
-    // padding-bottom: $footer_height;
-    padding-top: 1rem;
-    //margin-top: -1rem;
-
-    pointer-events: none;
 }
 
 .container.content {
@@ -104,8 +98,6 @@ body {
     margin-top: 1rem;
     margin-bottom: 1rem;
 
-    // background-attachment: fixed;
-    
     background: darken(rgba($text_background_color, 0.83), 7%);
     // background: linear-gradient(12deg, darken(rgba($text_background_color, 0.78), 20%), 
     //                                   rgba($text_background_color, 0.78)); // darken(saturate(rgba($antique-brass, 0.4), 30%), 50%);
@@ -119,9 +111,6 @@ body {
 }
 
 header, footer {
-    // background-color: darken(rgb(100, 0, 255), 40%);
-    // background-size: cover;
-    // background-attachment: fixed;
     pointer-events: auto;
 }
 
@@ -129,11 +118,6 @@ header {
     background: linear-gradient(0deg, $header-dark-blue, rgba($header-dark-blue, 0.2));
     background-attachment: scroll;
     
-    // background-image: url('../images/ripples.png');
-    // background-repeat: repeat;
-    // background-position-y: center;
-    // background-blend-mode: multiply;
-
     min-height: $header_height;
 
     @include media-breakpoint-down(md) {
@@ -144,15 +128,12 @@ header {
     position: relative;
     z-index: 2;
 
-    // overflow: hidden;
-
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
 }
 
 footer {
-    // position: absolute;
     min-height: $footer_height;
 
     color: $champagne-pink;
@@ -167,28 +148,20 @@ footer {
         }
     }
 
-    // background-image: url('../images/black_blurred_small.jpg');
     background: linear-gradient(180deg, rgba($black-coffee, 0.95), rgba($black-coffee, 0.8));
     background-position-y: center;
 
     @include media-breakpoint-down(md) {
         min-height: $mobile_footer_height;
-        // bottom: $mobile_footer_height;
     }
 
     width: 100%;
-    // bottom: $footer_height;
-    // bottom: 0;
-
-    // overflow: hidden;
-
     z-index: -1;
 
     padding-top: 2rem;
 }
 
 p img {
-    // max-width: 20%;
     border-radius: 5px;
     margin: 0.5rem 1.5rem;
 
