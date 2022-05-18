@@ -4,17 +4,17 @@ const glob = require('glob-all');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin'); // <-- can potentially strip out unused bootstrap (preliminary setup wasn't successful--broke certain page styling)
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 
 module.exports = (env, options) => {
     return {
         devServer: {
-            contentBase: path.join(__dirname, 'dist'),
-            compress: true,
+            // contentBase: path.join(__dirname, 'dist'),
+            // compress: true,
             host: '0.0.0.0',
             port: 9000,
-            watchContentBase: true,
+            // watchFiles: './',
         },
         // mode: 'production',
         entry: {
@@ -22,13 +22,14 @@ module.exports = (env, options) => {
         },
         output: {
             filename: '[name].js',
-            path: path.resolve(__dirname, 'dist'),
+            path: path.resolve(__dirname, 'docs'),
+            publicPath: '/',
         },
         // uglifyjs
         optimization: {
-            minimizer: [new UglifyJsPlugin()]
+            minimizer: [new TerserPlugin()]
         },
-        plugins: [new MiniCssExtractPlugin('[name].css'), 
+        plugins: [new MiniCssExtractPlugin(), // '[name].css'), 
                 //   new PurgecssPlugin({
                 //     paths: glob.sync([
                 //         `${path.join(__dirname, 'src')}/**/*`,
@@ -58,9 +59,9 @@ module.exports = (env, options) => {
                                                 },  */
                         {
                             loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                hmr: process.env.NODE_ENV === 'development',
-                            }
+                            // options: {
+                            //     publicPath: path.resolve(__dirname, 'assets'),
+                            // }
                         },
                         {
                             loader: 'css-loader', // translates CSS into CommonJS modules
@@ -105,7 +106,12 @@ module.exports = (env, options) => {
                 },
                 {
                     test: /\.pug$/,
-                    loader: 'pug-loader'
+                    use: [{
+                        loader: '@webdiscus/pug-loader', 
+                        // options: {
+                        //     publicPath: path.resolve(__dirname, 'assets'),
+                        // }
+                    }],
                 },
             ],
 
