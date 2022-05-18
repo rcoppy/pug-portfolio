@@ -105,14 +105,26 @@ module.exports = (env, options) => {
                     }],
                 },
                 {
+                    // test: /\.pug$/,
+                    // use: [
+                    //     // html loader gets webpack to process <img> src
+                    //     'html-loader',
+                    //     // requires pretty option otherwise some spacing between elements is lost
+                    //     'pug-html-loader?{"pretty":true,"exports":false}'
+                    //     ],
                     test: /\.pug$/,
                     use: [{
+                        
                         loader: '@webdiscus/pug-loader', 
                         // options: {
                         //     publicPath: path.resolve(__dirname, 'assets'),
                         // }
                     }],
                 },
+                // {
+                //     test: /\.(md|markdown)$/,
+                //     use: 'markdown-image-loader'
+                // },
             ],
 
         }

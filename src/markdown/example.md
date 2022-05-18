@@ -14,6 +14,9 @@ This is faster than having to hardcode specially-formatted HTML.
 
 ## Awesome!!
 
+(A current limitation of the bundler is that local image paths don't get interpolated when embedded in markdown.)
+
+
 Also, links are automatically recognized as links (no more redundant specifying `a` tags!)
 
 http://www.dossamer.io/

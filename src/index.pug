@@ -10,7 +10,10 @@ block content
     
     <br>
 
-    include:markdown-it(linkify) ./markdown/example.md
+    include:markdown-it(linkify, html) ./markdown/example.md
+
+    :markdown-it
+      this is how you write inline markdown.
 
   hr
 
