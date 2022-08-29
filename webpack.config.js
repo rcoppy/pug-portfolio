@@ -23,7 +23,7 @@ module.exports = (env, options) => {
         output: {
             filename: '[name].js',
             path: path.resolve(__dirname, 'docs'),
-            publicPath: './',
+            publicPath: 'auto',
         },
         // uglifyjs
         optimization: {
